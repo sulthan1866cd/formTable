@@ -2,6 +2,7 @@ import React, { useEffect, useReducer, useRef, useState } from "react";
 import Button from "../helpers/Button";
 import "./table.css";
 import Checkbox from "../helpers/Checkbox";
+import { Link } from "react-router-dom";
 
 const Table = () => {
   const [render, setRender] = useState(false);
@@ -52,52 +53,57 @@ const Table = () => {
     <div className="table-container">
       {storedList.length === 0 ? (
         <>
-          no items in list add list <a href="/">here</a>
+          no items in list add list <Link to="/">here</Link>
         </>
       ) : (
-        <table className="list-table">
-          <tbody>
-            <tr>
-              <th></th>
-              <th>Title</th>
-              <th>Category</th>
-              <th></th>
-            </tr>
-            {list.map((item) => (
-              <tr key={item.id}>
-                <td>
-                  <Checkbox
-                    props={{
-                      value: item.checked,
-                      dispatch: tableDispatch,
-                      id: item.id,
-                    }}
-                  />
-                </td>
-                <td className={item.checked ? "strike-out" : ""}>
-                  {item.Title}
-                </td>
-                <td className={item.checked ? "strike-out" : ""}>
-                  {item.Category}
-                </td>
-                <td>
-                  <Button
-                    props={{ onClick: () => deleteItem(item.id), color: "red" }}
-                  >
-                    delete
-                  </Button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      )}
-      {storedList.length > lastIndex && (
         <>
-          <Button props={{ color: "green", onClick: showMore }}>
-            show more
-          </Button>
-          add items to list <a href="/">here</a>
+          <table className="list-table">
+            <tbody>
+              <tr>
+                <th></th>
+                <th>Title</th>
+                <th>Category</th>
+                <th></th>
+              </tr>
+              {list.map((item) => (
+                <tr key={item.id}>
+                  <td>
+                    <Checkbox
+                      props={{
+                        value: item.checked,
+                        dispatch: tableDispatch,
+                        id: item.id,
+                      }}
+                    />
+                  </td>
+                  <td className={item.checked ? "strike-out" : ""}>
+                    {item.Title}
+                  </td>
+                  <td className={item.checked ? "strike-out" : ""}>
+                    {item.Category}
+                  </td>
+                  <td>
+                    <Button
+                      props={{
+                        onClick: () => deleteItem(item.id),
+                        color: "red",
+                      }}
+                    >
+                      delete
+                    </Button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          {storedList.length > lastIndex && (
+            <Button props={{ color: "green", onClick: showMore }}>
+              show more
+            </Button>
+          )}
+          <p>
+            add items to list <Link to="/">here</Link>
+          </p>
         </>
       )}
     </div>

@@ -2,6 +2,7 @@ import React, { useReducer, useRef } from "react";
 import Input from "../helpers/Input";
 import Button from "../helpers/Button";
 import "./form.css";
+import { Link } from "react-router-dom";
 
 const Form = () => {
   const list = JSON.parse(localStorage.getItem("list") || "[]");
@@ -80,7 +81,7 @@ const Form = () => {
         Submit
       </Button>
       <center>
-        view table <a href="/show-table">here</a>
+        view table <Link to="/show-table">here</Link>
       </center>
     </form>
   );
