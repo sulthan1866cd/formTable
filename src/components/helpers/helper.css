@@ -1,0 +1,28 @@
+.btn{
+  height: 2rem;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.btn-green {
+  background-color: lawngreen;
+}
+.btn-green:hover {
+  background-color: rgb(103, 206, 0);
+}
+.btn-red {
+  background-color: red;
+  color: white;
+}
+.btn-red:hover {
+  background-color: rgb(209, 0, 0);
+  color: white;
+}
+
+
+
+.input{
+    height: 2rem;
+    margin: 1rem;
+    border-radius: 8px;
+}
