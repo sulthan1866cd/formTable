@@ -1,5 +1,5 @@
 import React from "react";
-import "./helper.css";
+import "./Helper.css";
 const Input = ({ props }) => {
   const { value, dispatch, label, type, required } = props;
   return (

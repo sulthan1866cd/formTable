@@ -1,5 +1,5 @@
 import React from "react";
-import "./helper.css";
+import "./Helper.css";
 const Checkbox = ({ props }) => {
   const { value, dispatch, id } = props;
   return (

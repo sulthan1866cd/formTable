@@ -1,7 +1,7 @@
 import React, { useReducer, useRef } from "react";
-import Input from "../helpers/Input";
-import Button from "../helpers/Button";
-import "./form.css";
+import Input from "../Helpers/Input";
+import Button from "../Helpers/Button";
+import "./Form.css";
 import { Link } from "react-router-dom";
 
 const Form = () => {

@@ -1,5 +1,5 @@
 import React from "react";
-import "./helper.css";
+import "./Helper.css";
 
 const Button = ({ props, children }) => {
   const { onClick, color } = props;

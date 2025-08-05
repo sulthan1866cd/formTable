@@ -1,7 +1,7 @@
 import React, { useEffect, useReducer, useRef, useState } from "react";
-import Button from "../helpers/Button";
-import "./table.css";
-import Checkbox from "../helpers/Checkbox";
+import Button from "../Helpers/Button";
+import "./Table.css";
+import Checkbox from "../Helpers/Checkbox";
 import { Link } from "react-router-dom";
 
 const Table = () => {
